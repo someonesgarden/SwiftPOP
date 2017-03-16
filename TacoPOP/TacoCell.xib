@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12113" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TacoCell" id="gTV-IL-0wX" customClass="TacoCell" customModule="TacoPOP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-bj-uoi">
+                        <rect key="frame" x="0.0" y="0.0" width="211" height="211"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beef" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-iN-b9I">
+                                <rect key="frame" x="0.0" y="0.0" width="171" height="145"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="CoW-Vk-Ket">
+                                <rect key="frame" x="0.0" y="145" width="171" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="5Mv-0y-aIQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="CoW-Vk-Ket" firstAttribute="leading" secondItem="QSg-bj-uoi" secondAttribute="leading" id="ZV6-Fo-Djn"/>
+                            <constraint firstAttribute="trailing" secondItem="CoW-Vk-Ket" secondAttribute="trailing" id="a1o-2Q-pf8"/>
+                            <constraint firstItem="CoW-Vk-Ket" firstAttribute="top" secondItem="cuS-iN-b9I" secondAttribute="bottom" id="evv-ZE-G9g"/>
+                            <constraint firstAttribute="bottom" secondItem="CoW-Vk-Ket" secondAttribute="bottom" id="hAu-fe-c1E"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="QSg-bj-uoi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7jt-bt-nzE"/>
+                <constraint firstAttribute="bottom" secondItem="QSg-bj-uoi" secondAttribute="bottom" id="Com-u2-xDf"/>
+                <constraint firstAttribute="trailing" secondItem="QSg-bj-uoi" secondAttribute="trailing" id="JbN-ad-GYb"/>
+                <constraint firstItem="QSg-bj-uoi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="m0R-iO-pdi"/>
+            </constraints>
+            <size key="customSize" width="171" height="171"/>
+            <connections>
+                <outlet property="tacoImage" destination="cuS-iN-b9I" id="M47-tr-e3k"/>
+                <outlet property="tacoLabel" destination="CoW-Vk-Ket" id="iwR-9W-ucV"/>
+            </connections>
+            <point key="canvasLocation" x="94.5" y="114.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Beef" width="960" height="640"/>
+    </resources>
+</document>
